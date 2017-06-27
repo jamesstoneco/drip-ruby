@@ -5,6 +5,7 @@ require "drip/client/tags"
 require "drip/client/events"
 require "drip/client/campaigns"
 require "drip/client/purchases"
+require "drip/client/broadcasts"
 require "faraday"
 require "faraday_middleware"
 require "json"
@@ -17,6 +18,7 @@ module Drip
     include Events
     include Campaigns
     include Purchases
+    include Broadcasts
 
     attr_accessor :access_token, :api_key, :account_id
 
